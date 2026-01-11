@@ -81,7 +81,8 @@ app.use('/gen', async (req, res) => {
        height: 500
       }
     }));
-    
+
+    await context.close();
   } catch(e) {
     res.code(500).send({
       status: false,
@@ -89,7 +90,7 @@ app.use('/gen', async (req, res) => {
       message: e.message
     })
   } finally {
-    await context.close();
+    // nothing
   }
 });
 
