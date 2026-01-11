@@ -2,6 +2,10 @@
   "name": "brat",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest --detectOpenHandles --verbose"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^1.7.9",
